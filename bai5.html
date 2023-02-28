@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>phan loai hoc sinh</title>
+</head>
+<body>
+<form>
+  Môn toán <input type="number" id="o1"/></br>
+    Môn lí <input type="number" id="o2"/></br>
+    Môn hóa <input type="number" id="o3"/></br>
+    <div id="demo"></div></br>
+    <button type="button" onclick="show();">kiểm tra</button>
+</form>
+<script>
+    function show() {
+    let a = parseFloat(document.getElementById('o1').value);
+    let b = parseFloat(document.getElementById('o2').value);
+    let c = parseFloat(document.getElementById('o3').value);
+    let t = (a+b+c)/3
+        if (t < 5) {
+            document.getElementById('demo').innerHTML = 'học lực kém';
+        } else if (t <= 8) {
+            document.getElementById('demo').innerHTML = 'học lực khá';
+        } else if (t <= 10)
+            document.getElementById('demo').innerHTML = 'học lực giỏi';
+    }
+</script>
+
+</body>
+</html>
